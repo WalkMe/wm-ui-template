@@ -1,7 +1,7 @@
 {
   "name": "walkme-ui-template",
   "version": "1.0.0",
-  "description": "UI for teach me application",
+  "description": "Walkme UI template",
   "main": "index.ts",
   "scripts": {
     "test": "echo Tests TBD",

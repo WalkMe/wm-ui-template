@@ -34,7 +34,6 @@ export default function App() {
     getUrlParamValueByName,
   } = useAppManager();
   const [walkmeSDK, setWalkmeSDK] = useState({} as ISdk);
-  const [teachmeApp, setTeachmeApp] = useState({} as WalkMeApp);
   const [appState, setAppState] = useState(defaultInitialAppState as IAppState);
   const { initiated } = appState;
   const [informationScreen, setInformationScreen] = useState({
@@ -89,13 +88,6 @@ export default function App() {
             setWalkmeSDK(walkme);
           }
 
-          const teachme = await walkme.apps.getApp("teachme");
-
-          // Teachme Guard
-          if (teachme) {
-            setTeachmeApp(teachme);
-          }
-
           // Cleanups before set state
           timeout = setTimeout(() => {
             throw new Error(
@@ -126,7 +118,6 @@ export default function App() {
           <AppContext.Provider
             value={{
               walkmeSDK,
-              teachmeApp,
               appState,
             }}
           >

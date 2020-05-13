@@ -14,5 +14,4 @@ export interface sidebarOptions {
 export interface IAppContext {
   appState: IAppState;
   walkmeSDK: ISdk;
-  teachmeApp: WalkMeApp;
 }
